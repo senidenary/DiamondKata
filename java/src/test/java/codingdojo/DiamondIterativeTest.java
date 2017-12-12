@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
  * At that point you should have a working implementation.
  */
 public class DiamondIterativeTest {
-
+    @Ignore
     @Test
     public void DiamondA_has_one_line_containing_A() {
         assertEquals("A", Diamond.print('A'));
