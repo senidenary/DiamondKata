@@ -20,6 +20,20 @@ public class Diamond {
         return rows;
     }
 
+    public List<Character> getLetterSequence() {
+        List<Character> letterSequence = new ArrayList<Character>();
+        int halfSize = (middleLetter - FIRST_CHAR);
+
+        for (int i = 0; i <= halfSize; ++i) {
+            letterSequence.add((char)(FIRST_CHAR + i));
+        }
+        for (int i = halfSize - 1; i >= 0; --i) {
+            letterSequence.add((char)(FIRST_CHAR + i));
+        }
+
+        return letterSequence;
+    }
+
     public static String print(char middleLetter) {
         Diamond diamond = new Diamond(middleLetter);
         StringBuffer result = new StringBuffer();

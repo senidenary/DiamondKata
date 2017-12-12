@@ -25,13 +25,12 @@ public class DiamondIncrementalTest {
         assertEquals("A", Diamond.print('A'));
     }
 
-    @Ignore
     @Test
     public void LetterSequence_is_list_of_letters_on_each_line_of_the_diamond() {
-        //assertCharacterSequence(new Diamond('A').getLetterSequence(), 'A');
-        //assertCharacterSequence(new Diamond('B').getLetterSequence(), 'A', 'B', 'A');
-        //assertCharacterSequence(new Diamond('C').getLetterSequence(), 'A', 'B', 'C', 'B', 'A');
-        //assertCharacterSequence(new Diamond('D').getLetterSequence(), 'A', 'B', 'C', 'D', 'C', 'B', 'A');
+        assertCharacterSequence(new Diamond('A').getLetterSequence(), 'A');
+        assertCharacterSequence(new Diamond('B').getLetterSequence(), 'A', 'B', 'A');
+        assertCharacterSequence(new Diamond('C').getLetterSequence(), 'A', 'B', 'C', 'B', 'A');
+        assertCharacterSequence(new Diamond('D').getLetterSequence(), 'A', 'B', 'C', 'D', 'C', 'B', 'A');
     }
 
     @Ignore
