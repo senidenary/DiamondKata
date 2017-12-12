@@ -41,13 +41,12 @@ public class DiamondIncrementalTest {
         assertIntegerSequence(new Diamond('D').getIndentationSequence(), 3,2,1,0,1,2,3);
     }
 
-    @Ignore
     @Test
     public void BetweenSequence_is_a_list_of_how_many_spaces_there_are_between_repeated_letters_on_each_line_of_the_diamond() {
-        //assertIntegerSequence(new Diamond('A').getBetweenSequence(), 0);
-        //assertIntegerSequence(new Diamond('B').getBetweenSequence(), 0,1,0);
-        //assertIntegerSequence(new Diamond('C').getBetweenSequence(), 0,1,3,1,0);
-        //assertIntegerSequence(new Diamond('D').getBetweenSequence(), 0,1,3,5,3,1,0);
+        assertIntegerSequence(new Diamond('A').getBetweenSequence(), 0);
+        assertIntegerSequence(new Diamond('B').getBetweenSequence(), 0,1,0);
+        assertIntegerSequence(new Diamond('C').getBetweenSequence(), 0,1,3,1,0);
+        assertIntegerSequence(new Diamond('D').getBetweenSequence(), 0,1,3,5,3,1,0);
     }
 
     @Ignore

@@ -48,6 +48,19 @@ public class Diamond {
         return indentationSequence;
     }
 
+    public List<Integer> getBetweenSequence() {
+        List<Integer> betweenSequence = new ArrayList<Integer>();
+
+        for (int i = 0; i <= halfSize; ++i) {
+            betweenSequence.add(Math.max(i * 2 - 1, 0));
+        }
+        for (int i = halfSize - 1; i >= 0; --i) {
+            betweenSequence.add(Math.max(i * 2 - 1, 0));
+        }
+
+        return betweenSequence;
+    }
+
     public static String print(char middleLetter) {
         Diamond diamond = new Diamond(middleLetter);
         StringBuffer result = new StringBuffer();
