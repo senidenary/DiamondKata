@@ -3,3 +3,4 @@ scala/project
 **/target
 **/*.iml
 **/*.pyc
+*.swp
