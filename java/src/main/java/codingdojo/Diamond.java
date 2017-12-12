@@ -16,12 +16,18 @@ public class Diamond {
 
     public List<List<Character>> getRows() {
         ArrayList<List<Character>> rows = new ArrayList<List<Character>>();
-        ArrayList<Character> row = new ArrayList<Character>();
-        row.add(FIRST_CHAR);
-        rows.add(row);
+
+        for (int i = 0; i <= halfSize; ++i) {
+            rows.add(getOneRow((char)(FIRST_CHAR + i), 0, 0));
+        }
+        for (int i = halfSize - 1; i >= 0; --i) {
+            rows.add(getOneRow((char)(FIRST_CHAR + i), 0, 0));
+        }
+
         return rows;
     }
 
+    // I'm not sure what the last two parameters are supposed to do.
     public List<Character> getOneRow(char rowLetter, int a, int b) {
         List<Character> row = new ArrayList<Character>();
         int rowIndex = rowLetter - FIRST_CHAR;
