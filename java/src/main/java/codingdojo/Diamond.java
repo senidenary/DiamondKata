@@ -7,9 +7,11 @@ public class Diamond {
     private final static char FIRST_CHAR = 'A';
 
     private final char middleLetter;
+    private final int halfSize;
 
     public Diamond(char middleLetter) {
         this.middleLetter = middleLetter;
+        this.halfSize = middleLetter - FIRST_CHAR;
     }
 
     public List<List<Character>> getRows() {
@@ -22,7 +24,6 @@ public class Diamond {
 
     public List<Character> getLetterSequence() {
         List<Character> letterSequence = new ArrayList<Character>();
-        int halfSize = (middleLetter - FIRST_CHAR);
 
         for (int i = 0; i <= halfSize; ++i) {
             letterSequence.add((char)(FIRST_CHAR + i));
@@ -32,6 +33,19 @@ public class Diamond {
         }
 
         return letterSequence;
+    }
+
+    public List<Integer> getIndentationSequence() {
+        List<Integer> indentationSequence = new ArrayList<Integer>();
+
+        for (int i = halfSize; i > 0; --i) {
+            indentationSequence.add(i);
+        }
+        for (int i = 0; i <= halfSize; ++i) {
+            indentationSequence.add(i);
+        }
+
+        return indentationSequence;
     }
 
     public static String print(char middleLetter) {

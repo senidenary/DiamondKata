@@ -33,13 +33,12 @@ public class DiamondIncrementalTest {
         assertCharacterSequence(new Diamond('D').getLetterSequence(), 'A', 'B', 'C', 'D', 'C', 'B', 'A');
     }
 
-    @Ignore
     @Test
     public void IndentationSequence_is_a_list_of_indents_for_each_line_of_the_diamond() {
-        //assertIntegerSequence(new Diamond('A').getIndentationSequence(), 0);
-        //assertIntegerSequence(new Diamond('B').getIndentationSequence(), 1,0,1);
-        //assertIntegerSequence(new Diamond('C').getIndentationSequence(), 2,1,0,1,2);
-        //assertIntegerSequence(new Diamond('D').getIndentationSequence(), 3,2,1,0,1,2,3);
+        assertIntegerSequence(new Diamond('A').getIndentationSequence(), 0);
+        assertIntegerSequence(new Diamond('B').getIndentationSequence(), 1,0,1);
+        assertIntegerSequence(new Diamond('C').getIndentationSequence(), 2,1,0,1,2);
+        assertIntegerSequence(new Diamond('D').getIndentationSequence(), 3,2,1,0,1,2,3);
     }
 
     @Ignore
