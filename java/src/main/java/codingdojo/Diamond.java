@@ -2,6 +2,7 @@ package codingdojo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 public class Diamond {
     private final static char FIRST_CHAR = 'A';
@@ -89,11 +90,15 @@ public class Diamond {
     public static String print(char middleLetter) {
         Diamond diamond = new Diamond(middleLetter);
         StringBuffer result = new StringBuffer();
-        for (List<Character> chars : diamond.getRows()) {
-            for (Character c : chars) {
+        List<List<Character>> rows = diamond.getRows();
+        Iterator<List<Character>> itr = rows.iterator();
+        while (itr.hasNext()) {
+            for (Character c : itr.next()) {
                 result.append(c);
             }
-            //result.append("\n");
+            if (itr.hasNext()) {
+                result.append("\n");
+            }
         }
         return result.toString();
     }

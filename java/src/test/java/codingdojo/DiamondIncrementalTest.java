@@ -57,7 +57,6 @@ public class DiamondIncrementalTest {
         assertCharacterSequence(new Diamond('D').getOneRow('C', 1, 3), ' ', 'C', ' ', ' ', ' ', 'C');
     }
 
-    @Ignore
     @Test
     public void Rows_is_a_list_of_diamond_rows() {
         List<List<Character>> rows = new Diamond('B').getRows();
@@ -66,7 +65,6 @@ public class DiamondIncrementalTest {
         assertCharacterSequence(rows.get(2), ' ', 'A');
     }
 
-    @Ignore
     @Test
     public void print_DiamondC() {
         assertEquals("  A\n" +
@@ -76,7 +74,6 @@ public class DiamondIncrementalTest {
                      "  A", Diamond.print('C'));
     }
 
-    @Ignore
     @Test
     public void print_DiamondD() {
             assertEquals("   A\n" +
