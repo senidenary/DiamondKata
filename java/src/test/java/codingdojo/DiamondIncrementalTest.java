@@ -49,13 +49,12 @@ public class DiamondIncrementalTest {
         assertIntegerSequence(new Diamond('D').getBetweenSequence(), 0,1,3,5,3,1,0);
     }
 
-    @Ignore
     @Test
     public void OneRow_is_a_list_of_chars_in_one_diamond_row() {
-        //assertCharacterSequence(new Diamond('A').getOneRow('A', 0, 0), 'A');
-        //assertCharacterSequence(new Diamond('B').getOneRow('A', 1, 0), ' ', 'A');
-        //assertCharacterSequence(new Diamond('B').getOneRow('B', 0, 1), 'B', ' ', 'B');
-        //assertCharacterSequence(new Diamond('D').getOneRow('C', 1, 3), ' ', 'C', ' ', ' ', ' ', 'C');
+        assertCharacterSequence(new Diamond('A').getOneRow('A', 0, 0), 'A');
+        assertCharacterSequence(new Diamond('B').getOneRow('A', 1, 0), ' ', 'A');
+        assertCharacterSequence(new Diamond('B').getOneRow('B', 0, 1), 'B', ' ', 'B');
+        assertCharacterSequence(new Diamond('D').getOneRow('C', 1, 3), ' ', 'C', ' ', ' ', ' ', 'C');
     }
 
     @Ignore

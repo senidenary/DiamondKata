@@ -22,6 +22,25 @@ public class Diamond {
         return rows;
     }
 
+    public List<Character> getOneRow(char rowLetter, int a, int b) {
+        List<Character> row = new ArrayList<Character>();
+        int rowIndex = rowLetter - FIRST_CHAR;
+        int betweenSpaces = Math.max(rowIndex * 2 - 1, 0);
+
+        for (int i = 0; i < halfSize - rowIndex; ++i) {
+            row.add(' ');
+        }
+        row.add(rowLetter);
+        if (betweenSpaces > 0) {
+            for (int i = 0; i < betweenSpaces; ++i) {
+                row.add(' ');
+            }
+            row.add(rowLetter);
+        }
+
+        return row;
+    }
+
     public List<Character> getLetterSequence() {
         List<Character> letterSequence = new ArrayList<Character>();
 
@@ -38,11 +57,11 @@ public class Diamond {
     public List<Integer> getIndentationSequence() {
         List<Integer> indentationSequence = new ArrayList<Integer>();
 
-        for (int i = halfSize; i > 0; --i) {
-            indentationSequence.add(i);
-        }
         for (int i = 0; i <= halfSize; ++i) {
-            indentationSequence.add(i);
+            indentationSequence.add(halfSize - i);
+        }
+        for (int i = halfSize - 1; i >= 0; --i) {
+            indentationSequence.add(halfSize - i);
         }
 
         return indentationSequence;
